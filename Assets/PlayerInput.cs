@@ -20,7 +20,7 @@ public class PlayerInput : MonoBehaviour
         transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
     }
     
-    void OnCollisionEnter(Collision col)
+    void OnTriggerStay(Collider col)
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
