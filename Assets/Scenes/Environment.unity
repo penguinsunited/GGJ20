@@ -896,6 +896,133 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 532b12ab33e204166b86598f796a980d, type: 3}
+--- !u!1 &329240666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329240668}
+  - component: {fileID: 329240667}
+  m_Layer: 0
+  m_Name: SubmarineEngine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &329240667
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329240666}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e0135c25f354b43b0b9dd7584beb8802, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.64
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &329240668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329240666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15, y: 0.64875174, z: -0.1500001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &339515081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,6 +1426,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 767400283760761891, guid: f182a642f595f4d85b21f1f586d8d84e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 767400283760761897, guid: f182a642f595f4d85b21f1f586d8d84e,
         type: 3}
       propertyPath: m_Name
@@ -1484,6 +1616,7 @@ GameObject:
   - component: {fileID: 606800615}
   - component: {fileID: 606800614}
   - component: {fileID: 606800613}
+  - component: {fileID: 606800617}
   m_Layer: 0
   m_Name: Crack cube spot
   m_TagString: Untagged
@@ -1565,6 +1698,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606800611}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &606800617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606800611}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5a2d104d26c41d7b86c545f23ee533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownUntilBurst: 35
+  isBurst: 0
+  isFixed: 0
+  isAudioOn: 0
+  clips:
+  - {fileID: 8300000, guid: cd784bb808ec44451863774f4bfecd02, type: 3}
+  - {fileID: 8300000, guid: 5b8148b4fafd8472198118bbacd33f3e, type: 3}
+  - {fileID: 8300000, guid: 8f48b55c431f644f29b95d6a3bcb97c2, type: 3}
 --- !u!4 &608178462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1375952068001960227, guid: 6e43f4bd95091ea42a7c107fe085e77d,
@@ -1922,6 +2075,7 @@ GameObject:
   - component: {fileID: 802133853}
   - component: {fileID: 802133852}
   - component: {fileID: 802133851}
+  - component: {fileID: 802133855}
   m_Layer: 0
   m_Name: Crack cube spot
   m_TagString: Untagged
@@ -2003,6 +2157,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802133849}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &802133855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802133849}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5a2d104d26c41d7b86c545f23ee533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownUntilBurst: 25
+  isBurst: 0
+  isFixed: 0
+  isAudioOn: 0
+  clips:
+  - {fileID: 8300000, guid: cd784bb808ec44451863774f4bfecd02, type: 3}
+  - {fileID: 8300000, guid: 5b8148b4fafd8472198118bbacd33f3e, type: 3}
+  - {fileID: 8300000, guid: 8f48b55c431f644f29b95d6a3bcb97c2, type: 3}
 --- !u!1001 &853857540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2764,6 +2938,7 @@ GameObject:
   - component: {fileID: 1322190702}
   - component: {fileID: 1322190701}
   - component: {fileID: 1322190700}
+  - component: {fileID: 1322190704}
   m_Layer: 0
   m_Name: Crack cube spot
   m_TagString: Untagged
@@ -2845,6 +3020,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322190698}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1322190704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322190698}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5a2d104d26c41d7b86c545f23ee533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownUntilBurst: 15
+  isBurst: 0
+  isFixed: 0
+  isAudioOn: 0
+  clips:
+  - {fileID: 8300000, guid: cd784bb808ec44451863774f4bfecd02, type: 3}
+  - {fileID: 8300000, guid: 5b8148b4fafd8472198118bbacd33f3e, type: 3}
+  - {fileID: 8300000, guid: 8f48b55c431f644f29b95d6a3bcb97c2, type: 3}
 --- !u!1001 &1493249856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3942,6 +4137,7 @@ GameObject:
   - component: {fileID: 1999766930}
   - component: {fileID: 1999766929}
   - component: {fileID: 1999766928}
+  - component: {fileID: 1999766933}
   m_Layer: 0
   m_Name: Crack cube spot
   m_TagString: Untagged
@@ -4023,6 +4219,26 @@ Transform:
   m_Father: {fileID: 2087341422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -1.143, y: -33.105003, z: 2.025}
+--- !u!114 &1999766933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999766927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5a2d104d26c41d7b86c545f23ee533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownUntilBurst: 5
+  isBurst: 0
+  isFixed: 0
+  isAudioOn: 0
+  clips:
+  - {fileID: 8300000, guid: cd784bb808ec44451863774f4bfecd02, type: 3}
+  - {fileID: 8300000, guid: 5b8148b4fafd8472198118bbacd33f3e, type: 3}
+  - {fileID: 8300000, guid: 8f48b55c431f644f29b95d6a3bcb97c2, type: 3}
 --- !u!1 &2000829292
 GameObject:
   m_ObjectHideFlags: 0
