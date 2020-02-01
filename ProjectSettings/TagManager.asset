@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Crack
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3708581343
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Crack
+    uniqueID: 1568244259
+    locked: 0
+  - name: Player
+    uniqueID: 3000298211
     locked: 0
