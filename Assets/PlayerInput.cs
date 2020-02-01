@@ -19,4 +19,12 @@ public class PlayerInput : MonoBehaviour
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
         transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
     }
+    
+    void OnCollisionEnter(Collision col)
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("You are interacting with this object");
+        }
+    }
 }
