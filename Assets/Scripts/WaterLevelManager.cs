@@ -10,6 +10,23 @@ public class WaterLevelManager : MonoBehaviour
     int cracks;
     float drownSpeed;
     // Start is called before the first frame update
+
+    public int CalculateCracks()
+    {
+        int newCrackNumber = 0;
+
+        GameObject[] repairSpots;
+        repairSpots = GameObject.FindGameObjectsWithTag("RepairSpot");
+        foreach (GameObject spot in repairSpots)
+        {
+            if (spot.GetComponent<RepairSpotScript>().isCracked == true)
+            {
+                newCrackNumber = newCrackNumber + 1;
+            }
+        }
+        return newCrackNumber;
+    }
+
     void Start()
     {
         waterLevel = 0;
@@ -17,23 +34,15 @@ public class WaterLevelManager : MonoBehaviour
         cracks = 0;
         drownSpeed = 0f;
         waterLevelText = GetComponent<Text>();
+        InvokeRepeating("OutputWaterSpeed", 1f, 1f);
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            cracks += 1;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (cracks > 0)
-            {
-                cracks -= 1;
-            }
-        }
+        cracks = CalculateCracks();
         drownSpeed = speed * cracks;
         waterLevel += drownSpeed * 10;
         waterLevelText.text = ((int)waterLevel).ToString("000");
     }
 }
+
