@@ -6,21 +6,16 @@ public class Pipes : MonoBehaviour
 {
     public float countdownUntilBurst = 10.0f;
     
-    public bool IsBurst { get { return isBurst; }}
+    public bool HasBurst { get { return hasBurst; }}
     
     [SerializeField]
-    bool isBurst = false;
+    bool isBursting = false;
+    [SerializeField]
+    bool hasBurst = false;
     [SerializeField]
     bool isFixed = false;
     [SerializeField]
     bool isAudioOn = false;
-    
-//    [SerializeField]
-//    private AudioClip pipeThreatening = default;
-//    [SerializeField]
-//    private AudioClip pipeLeaking = default;
-//    [SerializeField]
-//    private AudioClip pipeFixed = default;
 
     public AudioClip[] clips;
     private AudioSource[] AudSources;
@@ -46,27 +41,37 @@ public class Pipes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //play about to burst sound
         if(countdownUntilBurst < 0)
         {
-            isBurst = true;
+            isBursting = true;
+            isFixed = false;
             if(!isAudioOn)
             {
                 AudioPlay();
+                BurstingToBurst();
                 isAudioOn = true;
             }
         }
+        
+        if(MiniGameManager.crackIsFixed)
+        {
+            isFixed = true;
+        }
+        
         if(isFixed)
         {
             AudioPlayFixedPipes();
-            countdownUntilBurst = Random.Range(0, 10.0f);
+            countdownUntilBurst = Random.Range(10, 20.0f);
             isAudioOn = false;
         }
         countdownUntilBurst -= Time.deltaTime;
     }
     
+    
     void AudioPlay()
     {
-        if(isBurst)
+        if(isBursting)
         {
             AudSources[0].Play();
             AudSources[1].PlayScheduled(AudioSettings.dspTime + AudSources[0].clip.length);
@@ -75,9 +80,16 @@ public class Pipes : MonoBehaviour
     
     void AudioPlayFixedPipes()
     {
-        AudSources[1].Stop();
+        //AudSources[1].Stop();
         AudSources[2].Play();
+        
     }
     
+    
+    void BurstingToBurst()
+    {
+        isBursting = false;
+        hasBurst = true;
+    }
     
 }
