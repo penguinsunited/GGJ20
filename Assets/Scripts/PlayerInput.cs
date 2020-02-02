@@ -26,7 +26,8 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P) && col.GetComponent<Pipes>().IsBurst)
         {
             Debug.Log("You are interacting with " + col.transform.parent.name);
-            SceneManager.LoadScene(2);
+            System.Random rnd = new System.Random();
+            SceneManager.LoadScene(rnd.Next(2, 12));
         }
     }
 }

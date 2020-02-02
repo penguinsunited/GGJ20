@@ -18,11 +18,11 @@ public class WaterLevelManager : MonoBehaviour
     {
         int newCrackNumber = 0;
 
-        GameObject[] repairSpots;
-        repairSpots = GameObject.FindGameObjectsWithTag("RepairSpot");
-        foreach (GameObject spot in repairSpots)
+        GameObject[] repairPipes;
+        repairPipes = GameObject.FindGameObjectsWithTag("Pipe");
+        foreach (GameObject pipe in repairPipes)
         {
-            if (spot.GetComponent<RepairSpotScript>().isCracked == true)
+            if (pipe.GetComponent<Pipes>().IsBurst == true)
             {
                 newCrackNumber = newCrackNumber + 1;
             }
@@ -39,7 +39,6 @@ public class WaterLevelManager : MonoBehaviour
         velocity = 10;
         adjuster = 2000;
         waterLevelText = GetComponent<Text>();
-        InvokeRepeating("OutputWaterSpeed", 1f, 1f);
     }
     // Update is called once per frame
     void Update()
