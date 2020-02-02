@@ -15,11 +15,11 @@ public class WaterLevelManager : MonoBehaviour
     {
         int newCrackNumber = 0;
 
-        GameObject[] repairSpots;
-        repairSpots = GameObject.FindGameObjectsWithTag("RepairSpot");
-        foreach (GameObject spot in repairSpots)
+        GameObject[] repairPipes;
+        repairPipes = GameObject.FindGameObjectsWithTag("Pipe");
+        foreach (GameObject pipe in repairPipes)
         {
-            if (spot.GetComponent<RepairSpotScript>().isCracked == true)
+            if (pipe.GetComponent<Pipes>().IsBurst == true)
             {
                 newCrackNumber = newCrackNumber + 1;
             }
