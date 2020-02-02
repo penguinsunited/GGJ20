@@ -7,6 +7,8 @@ TagManager:
   - Crack
   - Canvas
   - RepairSpot
+  - Pipe
+  - Water
   layers:
   - Default
   - TransparentFX

@@ -39,7 +39,6 @@ public class WaterLevelManager : MonoBehaviour
         velocity = 10;
         adjuster = 2000;
         waterLevelText = GetComponent<Text>();
-        InvokeRepeating("OutputWaterSpeed", 1f, 1f);
     }
     // Update is called once per frame
     void Update()
