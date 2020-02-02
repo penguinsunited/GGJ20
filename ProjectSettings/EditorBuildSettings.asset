@@ -11,7 +11,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameover.unity
     guid: b04a291ba4af43d459bf978e10967af5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Minigame.unity
     guid: 9b9ffe8eecd23425badb87274730050f
+  - enabled: 1
+    path: Assets/Scenes/Minigame_1.unity
+    guid: eb24a4aa7c532ce458a5f1862955f465
+  - enabled: 1
+    path: Assets/Scenes/Minigame_2.unity
+    guid: e0b05efc6295b4c4394103e79cab99da
+  - enabled: 1
+    path: Assets/Scenes/Minigame_3.unity
+    guid: 39211148f22db934c9355b24f7b7d7d3
+  - enabled: 1
+    path: Assets/Scenes/Minigame_4.unity
+    guid: 8e59b67d4668aa14480bfa7d23562584
+  - enabled: 1
+    path: Assets/Scenes/Minigame_5.unity
+    guid: 3411e4aa94d12ec428224a1f734e6989
+  - enabled: 1
+    path: Assets/Scenes/Minigame_6.unity
+    guid: c12ea37ba739cf34abe33c2342250fb0
+  - enabled: 1
+    path: Assets/Scenes/Minigame_7.unity
+    guid: f617ba1df4b659b4093072ed736c3442
+  - enabled: 1
+    path: Assets/Scenes/Minigame_8.unity
+    guid: a6a50271e7607c74e9e39aeefc6a4380
+  - enabled: 1
+    path: Assets/Scenes/Minigame_9.unity
+    guid: ae058a10c3087be40b4b5f668d41337a
+  - enabled: 1
+    path: Assets/Scenes/Minigame_10.unity
+    guid: a45e7b593ca452c48877995af263a110
   m_configObjects: {}

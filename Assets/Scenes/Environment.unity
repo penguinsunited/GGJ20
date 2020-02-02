@@ -2013,7 +2013,7 @@ GameObject:
   - component: {fileID: 606800617}
   m_Layer: 0
   m_Name: Crack cube spot
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2618,7 +2618,7 @@ GameObject:
   - component: {fileID: 802133855}
   m_Layer: 0
   m_Name: Crack cube spot
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4008,7 +4008,7 @@ GameObject:
   - component: {fileID: 1322190704}
   m_Layer: 0
   m_Name: Crack cube spot
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5011,6 +5011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb35e9adcef041f4a8da3b9c9f8f84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 0
+  adjuster: 0
 --- !u!114 &1922560968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5486,7 +5488,7 @@ GameObject:
   - component: {fileID: 1999766933}
   m_Layer: 0
   m_Name: Crack cube spot
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

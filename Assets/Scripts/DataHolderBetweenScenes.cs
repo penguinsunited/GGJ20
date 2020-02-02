@@ -5,4 +5,5 @@ using UnityEngine;
 public static class DataHolderBetweenScenes
 {
     static float timeLeft;
+    static float waterLevel;
 }
