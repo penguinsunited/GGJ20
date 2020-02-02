@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,7 +22,7 @@ public class WaterLevelManager : MonoBehaviour
         repairPipes = GameObject.FindGameObjectsWithTag("Pipe");
         foreach (GameObject pipe in repairPipes)
         {
-            if (pipe.GetComponent<Pipes>().IsBurst == true)
+            if (pipe.GetComponent<Pipes>().HasBurst == true)
             {
                 newCrackNumber = newCrackNumber + 1;
             }
