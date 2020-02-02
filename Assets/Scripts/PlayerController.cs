@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private int count;
+    private int finalCount = 9;
+    
+    public int Count { get { return count;}}
+    public int FinalCount { get { return finalCount;}}
 
     void Start()
     {

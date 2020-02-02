@@ -5,6 +5,9 @@ using UnityEngine;
 public class Pipes : MonoBehaviour
 {
     public float countdownUntilBurst = 10.0f;
+    
+    public bool IsBurst { get { return isBurst; }}
+    
     [SerializeField]
     bool isBurst = false;
     [SerializeField]
