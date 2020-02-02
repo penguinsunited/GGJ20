@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -22,9 +23,10 @@ public class PlayerInput : MonoBehaviour
     
     void OnTriggerStay(Collider col)
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) && col.GetComponent<Pipes>().IsBurst)
         {
-            Debug.Log("You are interacting with this object");
+            Debug.Log("You are interacting with " + col.transform.parent.name);
+            SceneManager.LoadScene(2);
         }
     }
 }

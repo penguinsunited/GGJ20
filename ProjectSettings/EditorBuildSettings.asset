@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameover.unity
     guid: b04a291ba4af43d459bf978e10967af5
+  - enabled: 1
+    path: Assets/Scenes/Minigame.unity
+    guid: 9b9ffe8eecd23425badb87274730050f
   m_configObjects: {}
