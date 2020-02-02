@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public static class TimeManager
 {
 
-    static int minutes = 10;
+    static int minutes = 3;
     static float seconds = 0f;
     
     static public float timeLeft = minutes * 60;
