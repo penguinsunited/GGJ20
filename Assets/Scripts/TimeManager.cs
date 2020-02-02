@@ -14,7 +14,6 @@ public static class TimeManager
     
     public static void DisplayTime(Text timeDisplay)
     {
-        Debug.Log(timeLeft);
         if (timeLeft <= 0f)
         {
             Debug.Log("制限時間終了");

@@ -8,9 +8,11 @@ public class MiniGameManager : MonoBehaviour
 {
     PlayerController playerController;
     public Text timeText;
+    public static bool crackIsFixed;
     
     void Awake()
     {
+        crackIsFixed = false;
         timeText = GameObject.FindWithTag("Canvas").GetComponentInChildren<Text>();
     }
 
@@ -28,6 +30,7 @@ public class MiniGameManager : MonoBehaviour
         if(playerController.Count == playerController.FinalCount)
         {
             SceneManager.LoadScene("Environment");
+            crackIsFixed = true;
         }
         if (TimeManager.isTimeUp)
         {

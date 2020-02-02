@@ -23,7 +23,7 @@ public class PlayerInput : MonoBehaviour
     
     void OnTriggerStay(Collider col)
     {
-        if(Input.GetKeyDown(KeyCode.P) && col.GetComponent<Pipes>().IsBurst)
+        if(Input.GetKeyDown(KeyCode.P) && col.GetComponent<Pipes>().HasBurst)
         {
             Debug.Log("You are interacting with " + col.transform.parent.name);
             SceneManager.LoadScene(2);
